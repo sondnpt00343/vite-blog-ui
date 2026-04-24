@@ -1,0 +1,49 @@
+<div class="container">
+  <header class="contact-page__header">
+    <h1 class="contact-page__title">Liên hệ</h1>
+    <p class="contact-page__lead">
+      Gửi tin qua form hoặc xem bản đồ bên cạnh.
+    </p>
+  </header>
+
+  <div class="row contact-layout gy-4">
+    <div class="col-6 col-lg-12">
+      <div class="contact-form-panel">
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group has-error">
+            <label for="name">Họ tên</label>
+            <input type="text" id="name" name="name" placeholder="Họ tên của bạn" aria-invalid="true" aria-describedby="name-error" />
+            <p class="form-group__error" id="name-error">
+              Họ tên là bắt buộc.
+            </p>
+          </div>
+          <div class="form-group has-error">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" aria-invalid="true" aria-describedby="email-error" />
+            <p class="form-group__error" id="email-error">
+              Email không hợp lệ.
+            </p>
+          </div>
+          <div class="form-group has-error">
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" placeholder="Nhập nội dung tin nhắn..." aria-invalid="true" aria-describedby="message-error"></textarea>
+            <p class="form-group__error" id="message-error">
+              Nội dung quá ngắn.
+            </p>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--md btn--primary" type="submit">
+              Gửi
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-12">
+      <div class="contact-map-slot" role="region" aria-label="Bản đồ">
+        <!-- optional: drop a Google Maps iframe here -->
+      </div>
+    </div>
+  </div>
+</div>

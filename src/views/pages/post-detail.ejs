@@ -1,0 +1,118 @@
+<div class="container">
+  <article class="article" aria-labelledby="post-title">
+    <header class="article__header">
+      <h1 class="article__title" id="post-title">
+        Giới thiệu về dự án blog
+      </h1>
+      <div class="article__meta">
+        <span><i class="fa-solid fa-calendar"></i>
+          24/04/2026</span>
+        <span><i class="fa-solid fa-folder"></i> Công
+          nghệ</span>
+        <span><i class="fa-solid fa-clock"></i> 5 phút
+          đọc</span>
+      </div>
+    </header>
+    <figure class="article__media">
+      <img class="article__media-img" src="https://picsum.photos/id/1/1200/675" alt="Ảnh minh hoạ bài viết" width="1200" height="675" loading="lazy" decoding="async" />
+    </figure>
+    <div class="article__body prose">
+      <p>
+        Mình bắt đầu với vài trang HTML tĩnh: trang chủ, chi
+        tiết bài, form đăng nhập đơn giản. Chưa cần
+        framework, chỉ cần bố cục gọn là đủ cho vài tuần
+        đầu.
+      </p>
+      <p>
+        Phần CSS gom vào reset và một file style chung.
+        Header và footer lặp lại giữa các file cho tới khi
+        muốn tách partial hoặc build bước sau.
+      </p>
+      <p>
+        Khi cần thêm tương tác - chẳng hạn menu mobile, gửi
+        form - lúc đó mới nối script vào từng chỗ, tránh
+        nhồi hết vào một file từ đầu.
+      </p>
+    </div>
+
+    <aside class="article-author" aria-label="Thông tin tác giả">
+      <div class="article-author__avatar">
+        <img class="article-author__img" src="https://picsum.photos/id/1005/112/112" alt="Ảnh tác giả" width="56" height="56" loading="lazy" decoding="async" />
+      </div>
+      <div class="article-author__info">
+        <p class="article-author__name">Nguyễn Văn A</p>
+        <p class="article-author__role">
+          Lập trình viên front-end
+        </p>
+        <p class="article-author__bio">
+          Hay viết ngắn về HTML, CSS và những thứ liên
+          quan tới trang tĩnh. Liên hệ qua trang Liên hệ
+          nếu bạn muốn trao đổi.
+        </p>
+      </div>
+    </aside>
+  </article>
+
+  <hr class="article-sep" />
+
+  <section class="related-posts" aria-labelledby="related-heading">
+    <h2 id="related-heading" class="related-posts__title">
+      Bài viết liên quan
+    </h2>
+    <div class="post-grid post-grid--related view-list">
+      <article class="post-card">
+        <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Cấu trúc thư mục gợi ý">
+          <img class="post-card__thumb" src="https://picsum.photos/id/2/640/360" alt="Ảnh minh hoạ: Cấu trúc thư mục gợi ý" width="640" height="360" loading="lazy" decoding="async" />
+        </a>
+        <div class="post-card__body">
+          <a class="post-card__meta" href="category.html">Học tập</a>
+          <h3 class="post-card__title">
+            <a href="post-detail.html">Cấu trúc thư mục gợi ý</a>
+          </h3>
+          <p class="post-card__excerpt">
+            Gom CSS vào vài file, đặt tên thư mục rõ
+            ràng để lúc mở lại không phải nhớ lại hết.
+          </p>
+          <a class="post-card__link" href="post-detail.html">Đọc tiếp
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="post-card">
+        <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Tips viết mã sạch">
+          <img class="post-card__thumb" src="https://picsum.photos/id/3/640/360" alt="Ảnh minh hoạ: Tips viết mã sạch" width="640" height="360" loading="lazy" decoding="async" />
+        </a>
+        <div class="post-card__body">
+          <a class="post-card__meta" href="category.html">Chia sẻ</a>
+          <h3 class="post-card__title">
+            <a href="post-detail.html">Tips viết mã sạch</a>
+          </h3>
+          <p class="post-card__excerpt">
+            Tách hàm nhỏ, đặt tên biến đọc vào là hiểu -
+            tránh để một file phình mãi.
+          </p>
+          <a class="post-card__link" href="post-detail.html">Đọc tiếp
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+      <article class="post-card">
+        <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Deploy blog tĩnh lên trang thử nghiệm">
+          <img class="post-card__thumb" src="https://picsum.photos/id/4/640/360" alt="Ảnh minh hoạ: Deploy blog tĩnh" width="640" height="360" loading="lazy" decoding="async" />
+        </a>
+        <div class="post-card__body">
+          <a class="post-card__meta" href="category.html">Công nghệ</a>
+          <h3 class="post-card__title">
+            <a href="post-detail.html">Deploy blog tĩnh lên trang thử
+              nghiệm</a>
+          </h3>
+          <p class="post-card__excerpt">
+            Chọn nơi host miễn phí, gắn tên miền phụ nếu
+            cần, và kiểm tra lại link ảnh tương đối từng
+            bước.
+          </p>
+          <a class="post-card__link" href="post-detail.html">Đọc tiếp
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
