@@ -1,0 +1,17 @@
+{
+    "name": "js-blog-ui",
+    "version": "1.0.0",
+    "main": "src/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Son Dang",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "vite": "^8.0.10"
+    }
+}

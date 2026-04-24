@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giới thiệu - Blog UI</title>
+        <link rel="stylesheet" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="assets/css/grid.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/theme.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="page">
+        <header class="site-header">
+            <div class="container site-header__inner">
+                <div class="site-header__left">
+                    <a class="site-header__brand" href="index.html">
+                        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+                        <span>Blog UI</span>
+                    </a>
+                    <nav
+                        class="nav-desktop nav-desktop--primary"
+                        aria-label="Menu chính"
+                    >
+                        <ul class="nav-desktop__list">
+                            <li>
+                                <a class="nav-desktop__link" href="index.html"
+                                    ><i class="fa-solid fa-house"></i> Trang
+                                    chủ</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-desktop__link"
+                                    href="about.html"
+                                    aria-current="page"
+                                    ><i class="fa-solid fa-circle-info"></i>
+                                    Giới thiệu</a
+                                >
+                            </li>
+                            <li>
+                                <a class="nav-desktop__link" href="contact.html"
+                                    ><i class="fa-solid fa-envelope"></i> Liên
+                                    hệ</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="site-header__end">
+                    <button
+                        type="button"
+                        class="theme-toggle"
+                        data-theme-toggle
+                        aria-label="Bật hoặc tắt giao diện tối"
+                        aria-pressed="false"
+                        title="Giao diện sáng/tối"
+                    >
+                        <span
+                            class="theme-toggle__icon theme-toggle__icon--when-light"
+                            aria-hidden="true"
+                            ><i class="fa-solid fa-sun"></i
+                        ></span>
+                        <span
+                            class="theme-toggle__icon theme-toggle__icon--when-dark"
+                            aria-hidden="true"
+                            ><i class="fa-solid fa-moon"></i
+                        ></span>
+                    </button>
+                    <nav
+                        class="nav-desktop nav-desktop--secondary"
+                        aria-label="Công cụ và tài khoản"
+                    >
+                        <ul class="nav-desktop__list">
+                            <li>
+                                <a
+                                    class="nav-desktop__link"
+                                    href="elements.html"
+                                    ><i class="fa-solid fa-layer-group"></i>
+                                    Elements</a
+                                >
+                            </li>
+                            <li>
+                                <a class="nav-desktop__link" href="login.html"
+                                    ><i
+                                        class="fa-solid fa-right-to-bracket"
+                                    ></i>
+                                    Đăng nhập</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-desktop__link"
+                                    href="register.html"
+                                    ><i class="fa-solid fa-user-plus"></i> Đăng
+                                    ký</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div
+                        class="nav-user"
+                        role="group"
+                        tabindex="0"
+                        aria-label="Tài khoản"
+                    >
+                        <div class="nav-user__wrap">
+                            <div class="nav-user__trigger">
+                                <img
+                                    class="nav-user__avatar"
+                                    src="https://picsum.photos/id/1005/72/72"
+                                    alt="Ảnh đại diện"
+                                    width="36"
+                                    height="36"
+                                />
+                                <span class="nav-user__name">Nguyễn Văn A</span>
+                                <i
+                                    class="fa-solid fa-chevron-down nav-user__caret"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+                            <div class="nav-user__dropdown">
+                                <ul class="nav-user__menu">
+                                    <li>
+                                        <a href="write.html">Viết bài</a>
+                                    </li>
+                                    <li>
+                                        <a href="my-posts.html"
+                                            >Bài viết của tôi</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="site-header__menu-toggle"
+                    title="Mở menu"
+                    aria-label="Mở menu"
+                    aria-controls="site-sidebar"
+                    aria-expanded="true"
+                >
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+        <div class="sidebar-overlay open" id="site-sidebar-backdrop"></div>
+
+        <aside
+            id="site-sidebar"
+            class="sidebar open"
+            aria-hidden="false"
+            aria-label="Menu điều hướng (mobile)"
+        >
+            <nav class="sidebar__inner" aria-label="Menu mobile">
+                <ul class="nav-mobile__list">
+                    <li>
+                        <a class="nav-mobile__link" href="index.html"
+                            ><i class="fa-solid fa-house"></i> Trang chủ</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="nav-mobile__link"
+                            href="about.html"
+                            aria-current="page"
+                            ><i class="fa-solid fa-circle-info"></i> Giới
+                            thiệu</a
+                        >
+                    </li>
+                    <li>
+                        <a class="nav-mobile__link" href="contact.html"
+                            ><i class="fa-solid fa-envelope"></i> Liên hệ</a
+                        >
+                    </li>
+                    <li>
+                        <a class="nav-mobile__link" href="elements.html"
+                            ><i class="fa-solid fa-layer-group"></i> Elements</a
+                        >
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            class="theme-toggle theme-toggle--sidebar"
+                            data-theme-toggle
+                            aria-label="Bật hoặc tắt giao diện tối"
+                            aria-pressed="false"
+                            title="Giao diện sáng/tối"
+                        >
+                            <span
+                                class="theme-toggle__icon theme-toggle__icon--when-light"
+                                aria-hidden="true"
+                                ><i class="fa-solid fa-sun"></i
+                            ></span>
+                            <span
+                                class="theme-toggle__icon theme-toggle__icon--when-dark"
+                                aria-hidden="true"
+                                ><i class="fa-solid fa-moon"></i
+                            ></span>
+                            <span class="theme-toggle__label">Giao diện</span>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="nav-mobile__link" href="login.html"
+                            ><i class="fa-solid fa-right-to-bracket"></i> Đăng
+                            nhập</a
+                        >
+                    </li>
+                    <li>
+                        <a class="nav-mobile__link" href="register.html"
+                            ><i class="fa-solid fa-user-plus"></i> Đăng ký</a
+                        >
+                    </li>
+                </ul>
+
+                <div class="sidebar-user">
+                    <div class="sidebar-user__row">
+                        <img
+                            class="sidebar-user__avatar"
+                            src="https://picsum.photos/id/1005/80/80"
+                            alt="Ảnh đại diện"
+                            width="40"
+                            height="40"
+                        />
+                        <span class="sidebar-user__name">Nguyễn Văn A</span>
+                    </div>
+                    <ul class="sidebar-user__list">
+                        <li>
+                            <a class="nav-mobile__link" href="write.html"
+                                ><i class="fa-solid fa-pen"></i> Viết bài</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-mobile__link" href="my-posts.html"
+                                ><i class="fa-solid fa-file-lines"></i> Bài viết
+                                của tôi</a
+                            >
+                        </li>
+                        <li>
+                            <a class="nav-mobile__link" href="#"
+                                ><i class="fa-solid fa-right-from-bracket"></i>
+                                Đăng xuất</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="container">
+                <article class="article" aria-labelledby="about-title">
+                    <header class="article__header">
+                        <h1 class="article__title" id="about-title">
+                            Giới thiệu về Blog UI
+                        </h1>
+                    </header>
+                    <div class="article__body prose">
+                        <p>
+                            <strong>Blog UI</strong> là bộ giao diện tĩnh: trang
+                            chủ, thể loại, bài dài, liên hệ, đăng nhập, viết
+                            bài, và bảng màu/Elements cho những thứ chung. Ưu
+                            tiên rhythm chữ, khoảng trắng và tông màu; nội dung
+                            thì bạn thay dần, không cần giữ câu ở đây nếu không
+                            muốn.
+                        </p>
+                        <h2>Trải nghiệm trên từng thiết bị</h2>
+                        <p>
+                            Bố cục co theo từng bề ngang, từ điện thoại, tablet
+                            tới màn lớn. Trên màn rộng, các mục Trang chủ, Giới
+                            thiệu, Liên hệ nằm cùng hệ với tên thương hiệu; nhóm
+                            tiếp theo (Elements, đăng nhập, đăng ký) và khối tài
+                            khoản nằm bên phải. Trên thiết bị nhỏ, các liên kết
+                            chính nằm trong menu kéo, mở bằng nút trên cùng,
+                            tránh cần kéo ngang để đọc nội dung.
+                        </p>
+                        <h2>Chế độ tối (dark) và sáng (light)</h2>
+                        <p>
+                            Người đọc có thể chuyển giữa nền sáng và nền tối
+                            thuận tiện cho mắt, tùy chỉnh trên trang. Phía giao
+                            diện, nút đổi chế độ ở thanh dùng và trong menu di
+                            động (cùng nhãn &quot;Giao diện&quot;) thể hiện biểu
+                            tượng đúng với từng bản sáng hoặc tối.
+                        </p>
+                        <h2>Trang lần lượt có gì</h2>
+                        <ul>
+                            <li>
+                                Thể loại, bài đọc, meta ảnh, phụ đề - kẻo cho ai
+                                đọc lướt cũng bám được.
+                            </li>
+                            <li>
+                                Liên hệ: form tối thiểu, chừa chỗ bản đồ/iframe
+                                nếu bạn cắm sau.
+                            </li>
+                            <li>
+                                Elements gom màu, nút, toast, modal: đúng tông
+                                với mấy màn còn lại.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container site-footer__inner">
+                <p class="site-footer__copy">© 2026 Blog UI</p>
+                <div class="site-footer__links">
+                    <a href="contact.html">Liên hệ</a>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
