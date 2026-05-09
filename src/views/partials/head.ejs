@@ -6,3 +6,30 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="stylesheet" href="assets/css/theme.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+  (() => {
+    const apply = dark => {
+      dark
+        ?
+        document.documentElement.setAttribute("data-theme", "dark") :
+        document.documentElement.removeAttribute("data-theme");
+
+      localStorage.setItem("theme", dark ? "dark" : "light");
+
+      requestIdleCallback(() => {
+        document.querySelectorAll("[data-theme-toggle]").forEach(btn => {
+          btn.setAttribute("aria-pressed", String(dark));
+        });
+      })
+    }
+
+    apply(localStorage.getItem("theme") === "dark");
+
+    document.addEventListener("click", e => {
+      if (!e.target.closest("[data-theme-toggle]")) return;
+
+      const dark = document.documentElement.getAttribute("data-theme") !== "dark";
+      apply(dark);
+    })
+  })();
+</script>
