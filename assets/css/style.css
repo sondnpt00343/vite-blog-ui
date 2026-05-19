@@ -680,29 +680,23 @@ img.sidebar-user__avatar {
 }
 
 
-/* hero */
+/* hero — slidezy integration */
 .hero-slider {
   margin-bottom: var(--space-2xl);
+}
+
+/* slidezy adds .slidezy-wrapper to container; let content div handle clipping */
+.hero-slider.slidezy-wrapper {
+  overflow: visible;
+}
+
+.hero-slider .slidezy-content {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: none;
   border: 1px solid color-mix(in srgb, var(--color-primary) 12%, var(--color-border));
 }
 
-.hero-slider__viewport {
-  overflow: hidden;
-  width: 100%;
-}
-
-.hero-slider__track {
-  display: flex;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
 .hero-slider__slide {
-  flex: 0 0 100%;
-  min-width: 100%;
   min-height: 12rem;
   display: flex;
   align-items: center;
@@ -737,6 +731,32 @@ img.sidebar-user__avatar {
 }
 .hero-slider__slide--4 {
   background-color: var(--hero-slide-4);
+}
+
+/* nav dots */
+.hero-slider .slidezy-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: 0;
+  padding: var(--space-sm) 0;
+}
+
+.hero-slider .slidezy-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, width 0.2s;
+}
+
+.hero-slider .slidezy-dot.active {
+  background: var(--color-primary);
+  width: 1.25rem;
 }
 
 

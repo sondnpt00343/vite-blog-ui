@@ -1,0 +1,5 @@
+dist/
+**/*.ejs
+*.html
+
+assets/css/
