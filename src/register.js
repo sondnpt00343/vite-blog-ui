@@ -1,15 +1,11 @@
 import JustValidate from "just-validate";
-import { emailRule, passwordRule, requiredRule, matchRule } from "./validators";
+import { emailRule, passwordRule, requiredRule, matchRule, formOptions } from "./validators";
 
 export const initRegister = () => {
   const el = document.querySelector("#register-form");
   if (!el) return;
 
-  const validate = new JustValidate(el, {
-    errorFieldCssClass: "invalid",
-    errorLabelCssClass: "form-group__error",
-    errorLabelStyle: {},
-  });
+  const validate = new JustValidate(el, formOptions);
 
   validate
     .addField("#name", [requiredRule("Vui lòng nhập họ tên")])

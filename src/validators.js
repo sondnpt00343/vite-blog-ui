@@ -1,3 +1,9 @@
+export const formOptions = {
+  errorFieldCssClass: "invalid",
+  errorLabelCssClass: "form-group__error",
+  errorLabelStyle: {},
+};
+
 export const requiredRule = (errorMessage) => ({
   rule: "required",
   errorMessage,

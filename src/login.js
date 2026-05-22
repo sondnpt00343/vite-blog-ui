@@ -1,15 +1,11 @@
 import JustValidate from "just-validate";
-import { emailRule, passwordRule } from "./validators";
+import { emailRule, passwordRule, formOptions } from "./validators";
 
 export const initLogin = () => {
   const el = document.querySelector("#login-form");
   if (!el) return;
 
-  const validate = new JustValidate(el, {
-    errorFieldCssClass: "invalid",
-    errorLabelCssClass: "form-group__error",
-    errorLabelStyle: {},
-  });
+  const validate = new JustValidate(el, formOptions);
 
   validate
     .addField("#email", emailRule)

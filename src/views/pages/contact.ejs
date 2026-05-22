@@ -9,27 +9,18 @@
   <div class="row contact-layout gy-4">
     <div class="col-6 col-lg-12">
       <div class="contact-form-panel">
-        <form class="contact-form" action="#" method="post">
-          <div class="form-group has-error">
+        <form class="contact-form" action="#" method="post" id="contact-form">
+          <div class="form-group">
             <label for="name">Họ tên</label>
             <input type="text" id="name" name="name" placeholder="Họ tên của bạn" aria-invalid="true" aria-describedby="name-error" />
-            <p class="form-group__error" id="name-error">
-              Họ tên là bắt buộc.
-            </p>
           </div>
-          <div class="form-group has-error">
+          <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="you@email.com" aria-invalid="true" aria-describedby="email-error" />
-            <p class="form-group__error" id="email-error">
-              Email không hợp lệ.
-            </p>
           </div>
-          <div class="form-group has-error">
+          <div class="form-group">
             <label for="message">Nội dung</label>
             <textarea id="message" name="message" placeholder="Nhập nội dung tin nhắn..." aria-invalid="true" aria-describedby="message-error"></textarea>
-            <p class="form-group__error" id="message-error">
-              Nội dung quá ngắn.
-            </p>
           </div>
           <div class="form-actions">
             <button class="btn btn--md btn--primary" type="submit">
@@ -42,7 +33,7 @@
 
     <div class="col-6 col-lg-12">
       <div class="contact-map-slot" role="region" aria-label="Bản đồ">
-        <!-- optional: drop a Google Maps iframe here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4994603879504!2d105.79999411132681!3d21.012692280551867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4df3c6c329%3A0xd8e14fe61fd32604!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIEdJw4FPIEThu6RDIEY4!5e0!3m2!1svi!2s!4v1779465522732!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
