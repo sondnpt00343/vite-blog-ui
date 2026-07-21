@@ -1,212 +1,28 @@
 <div class="container">
   <div class="page-title">
-    <h1>Bài viết mới nhất</h1>
-    <p>
-      Tuần này có gì mới, xem tạm ở đây trước khi bạn đào sâu.
-    </p>
+    <h1 class="skeleton skeleton-title"></h1>
+    <p class="skeleton skeleton-line"></p>
   </div>
 
   <div class="hero-slider">
-    <div class="hero-slider__slide hero-slider__slide--1">
-      Bố cục trang trước, chi tiết sau
-    </div>
-    <div class="hero-slider__slide hero-slider__slide--2">
-      Gom file cho đỡ lạc
-    </div>
-    <div class="hero-slider__slide hero-slider__slide--3">
-      Gọn code, bớt nợ kỹ thuật
-    </div>
-    <div class="hero-slider__slide hero-slider__slide--4">
-      Tải từng bước, đỡ giật màn hình
-    </div>
+    <div class="hero-slider__slide skeleton skeleton-hero" aria-hidden="true"></div>
   </div>
 
   <div class="post-section">
-    <div class="row post-grid gy-4">
+    <div class="row post-grid gy-4" aria-busy="true">
+      <% for (let i = 0; i < 12; i++) { %>
       <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Dựng khung trang tĩnh rồi mới mở rộng tính năng dần">
-            <img class="post-card__thumb" src="https://picsum.photos/id/19/640/360" alt="Ảnh minh hoạ: Dựng khung trang tĩnh rồi mở rộng tính năng" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
+        <article class="post-card post-card--skeleton" aria-hidden="true">
+          <div class="post-card__image skeleton"></div>
           <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Công nghệ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Dựng khung trang tĩnh, sau đó tích
-                hợp router hoặc form từng bước</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Làm layout trước, tách dữ liệu sau, mỗi
-              bước cập nhật một mảnh thì dễ sửa lỗi
-              hơn là nhồi hết vào từ đầu.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="skeleton skeleton-meta"></div>
+            <div class="skeleton skeleton-heading"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text skeleton-text--short"></div>
           </div>
         </article>
       </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Cấu trúc thư mục theo tính năng, dễ tìm file">
-            <img class="post-card__thumb" src="https://picsum.photos/id/20/640/360" alt="Ảnh minh hoạ: Cấu trúc thư mục theo tính năng" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Học tập</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Gom CSS theo tầng, đặt tên thư mục
-                gợi nhớ mục đích sử dụng</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Reset, lưới, style trang, component nên
-              ở các tệp tách bạch, tránh nhồi một nơi.
-              Mỗi lần cần sửa, bạn mở đúng tệp thay vì
-              tìm xuyên cả cây thư mục hay đổi tên
-              theo từng cảm hứng nhất thời.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Tên biến rõ, hàm nhỏ, tránh kéo dài tệp">
-            <img class="post-card__thumb" src="https://picsum.photos/id/21/640/360" alt="Ảnh minh hoạ: Tên biến rõ, hàm nhỏ, tệp gọn" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Chia sẻ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Viết tên dài một chút vẫn ổn nếu
-                giúp đọc đúng bối cảnh sửa lỗi</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Chia nhỏ hành vi thành hàm riêng, mỗi
-              hàm làm việc một mạch, tránh nhánh lồng
-              sâu. Nhờ vậy bạn tìm bug nhanh hơn và
-              mỗi thay đổi tác động hẹp, ít lôi cả tệp
-              vào cùng lúc cần review.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Deploy tĩnh, domain phụ, kiểm path ảnh">
-            <img class="post-card__thumb" src="https://picsum.photos/id/22/640/360" alt="Ảnh minh hoạ: Deploy tĩnh, kiểm path ảnh" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Công nghệ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Triển khai blog tĩnh, gắn tên miền
-                phụ và thử từng bước công khai</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Chọn host ổn định, bật HTTPS, rồi kiểm
-              link ảnh và tài nguyên tương đối/tuyệt
-              đối. Ghi lại từng bước khi cấu hình DNS
-              để lần sau không mất thời gian đoán vì
-              cấu hình cũ đã cách vài tháng.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Biến màu, spacing, font dùng lại cả dự án">
-            <img class="post-card__thumb" src="https://picsum.photos/id/23/640/360" alt="Ảnh minh hoạ: Biến màu, spacing, font dùng lại cả dự án" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Công nghệ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Dùng biến CSS cho màu, khoảng cách
-                và văn bản để đổi theme sạch</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Khai báo tập trung ở :root, tránh số
-              tuyệt đối rải rác trong hàng trăm rule.
-              Khi đổi sáng tối hoặc tăng tương phản,
-              bạn cập ít tệp hơn và bớt sợ sót màu cũ
-              còn sót ở góc khuất giao diện hoặc trạng
-              thái.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Tối ưu ảnh theo màn, nén hợp lý, lazy load">
-            <img class="post-card__thumb" src="https://picsum.photos/id/24/640/360" alt="Ảnh minh hoạ: Tối ưu ảnh theo màn, nén, lazy" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Học tập</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Chọn kích thước ảnh theo cột, nén
-                cân bằng dung lượng và sắc nét</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Xuất nhiều tỷ lệ nếu cần, gắn loading
-              lazy, khai báo rõ ràng width và height.
-              Giảm layout shift, trang nặng tải nhanh
-              hơn, đồng thời tránh tình trạng file ảnh
-              quá lớn so với khung thực tế trên màn
-              hẹp.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Khối tương tác, label, bàn phím, contrast">
-            <img class="post-card__thumb" src="https://picsum.photos/id/25/640/360" alt="Ảnh minh hoạ: Label, bàn phím, contrast, focus" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Chia sẻ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Gắn label đúng control, tập nắm tab
-                và focus cho người dùng cảm biến</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Kiểm tra phím Escape cho overlay, tương
-              phản màu chữ và nền, kích thước vùng bấm
-              đủ lớn. Các cải tiến này giúp cả màn cảm
-              ứng lẫn bàn phím, mang lại trải nghiệm
-              ổn mà ít tốn thêm tài nguyên cạnh mạng.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
-      <div class="col-3 col-xl-6 col-md-6 col-sm-12">
-        <article class="post-card">
-          <a class="post-card__image" href="post-detail.html" aria-label="Xem chi tiết: Tách CSS quan trọng, còn lại tải sau hợp lý">
-            <img class="post-card__thumb" src="https://picsum.photos/id/26/640/360" alt="Ảnh minh hoạ: Tách CSS quan trọng, ưu tiên phần above fold" width="640" height="360" loading="lazy" decoding="async" />
-          </a>
-          <div class="post-card__body">
-            <a class="post-card__meta" href="category.html">Công nghệ</a>
-            <h2 class="post-card__title">
-              <a href="post-detail.html">Gọi tài nguyên chính sớm, lề route
-                phụ, trì hoãn mảnh không cần</a>
-            </h2>
-            <p class="post-card__excerpt">
-              Ưu tiên phần màn hình trên, giảm chặn
-              render, tách tệp lớn thành phần tải sau.
-              Đo lại từng bước; đôi khi cắt một tệp ít
-              dùng giúp Cumulative Layout ổn hơn cả
-              hàng chục micro-tối ưu nhỏ lẻ khó nhận.
-            </p>
-            <a class="post-card__link" href="post-detail.html">Đọc tiếp
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-          </div>
-        </article>
-      </div>
+      <% } %>
     </div>
   </div>
 
@@ -214,25 +30,12 @@
     <h2 id="topic-heading" class="topic-section__title">
       Xem các bài viết theo chủ đề
     </h2>
-    <ul class="topic-tags">
+    <ul class="topic-tags" aria-busy="true">
+      <% for (let i = 0; i < 6; i++) { %>
       <li>
-        <a class="topic-tag" href="category.html">Front-end / Mobile apps</a>
+        <span class="topic-tag skeleton skeleton-topic" aria-hidden="true"></span>
       </li>
-      <li>
-        <a class="topic-tag" href="category.html">Back-end / Devops</a>
-      </li>
-      <li>
-        <a class="topic-tag" href="category.html">Học máy &amp; LLM</a>
-      </li>
-      <li>
-        <a class="topic-tag" href="category.html">Tester / Testing</a>
-      </li>
-      <li>
-        <a class="topic-tag" href="category.html">UI / UX / Design</a>
-      </li>
-      <li>
-        <a class="topic-tag" href="category.html">Others</a>
-      </li>
+      <% } %>
     </ul>
   </section>
 </div>
