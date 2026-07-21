@@ -4,10 +4,17 @@ import { initActiveNav } from "./active-nav";
 import { initLogin } from "./login";
 import { initRegister } from "./register";
 import { initContact } from "./contact";
+import { initHome } from "./pages/home";
 
-initSidebar();
-initSlider();
-initActiveNav();
-initLogin();
-initRegister();
-initContact();
+const initApp = async () => {
+  initSidebar();
+  initActiveNav();
+  initLogin();
+  initRegister();
+  initContact();
+
+  await initHome();
+  initSlider();
+};
+
+initApp();

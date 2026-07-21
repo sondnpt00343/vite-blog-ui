@@ -1,15 +1,15 @@
 <div class="container">
   <div class="page-title">
-    <h1 class="skeleton skeleton-title"></h1>
-    <p class="skeleton skeleton-line"></p>
+    <h1 class="skeleton skeleton-title" data-home-title></h1>
+    <p class="skeleton skeleton-line" data-home-lead></p>
   </div>
 
-  <div class="hero-slider">
+  <div class="hero-slider" data-home-slides>
     <div class="hero-slider__slide skeleton skeleton-hero" aria-hidden="true"></div>
   </div>
 
   <div class="post-section">
-    <div class="row post-grid gy-4" aria-busy="true">
+    <div class="row post-grid gy-4" data-home-posts aria-busy="true">
       <% for (let i = 0; i < 12; i++) { %>
       <div class="col-3 col-xl-6 col-md-6 col-sm-12">
         <article class="post-card post-card--skeleton" aria-hidden="true">
@@ -30,7 +30,7 @@
     <h2 id="topic-heading" class="topic-section__title">
       Xem các bài viết theo chủ đề
     </h2>
-    <ul class="topic-tags" aria-busy="true">
+    <ul class="topic-tags" data-home-topics aria-busy="true">
       <% for (let i = 0; i < 6; i++) { %>
       <li>
         <span class="topic-tag skeleton skeleton-topic" aria-hidden="true"></span>

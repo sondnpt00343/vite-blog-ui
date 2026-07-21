@@ -1,6 +1,7 @@
 export const initSlider = () => {
   const selector = ".hero-slider";
-  if (!document.querySelector(selector)) return;
+  const slider = document.querySelector(selector);
+  if (!slider || slider.querySelector(".skeleton")) return;
 
   new Slidezy(selector, {
     items: 1,
